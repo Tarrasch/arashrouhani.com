@@ -1,4 +1,4 @@
-<img style="float:right;" src="/images/me.png" alt="Arash Rouhani">
+<img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
 I am a student at Chalmers University of Technology in Sweden where I am studying
 to master of science in computer science. Currently I am on an exchange program
