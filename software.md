@@ -34,11 +34,12 @@ existed long before I started my university studies.
 ## Babuschka Engine (2008)
 
 An AI for the old board game
-[Babuschka](http://sites.google.com/site/babuschkaengine/Home).  The project
-had a Machine Learning part where the computer played millions of games against
-itself with different parameters to find the optimal parameter configuration.
-Back then I had no idea what Machine Learning was though! Downloads are in the
-[project page](http://sites.google.com/site/babuschkaengine/Home).
+[Babuschka](http://sites.google.com/site/babuschkaengine/Home).  To improve the
+game play of my engine, I took a Machine Learning approach and let the computer
+play millions of games against itself with different parameters to find the
+optimal parameter configuration.  Back then I had no idea what Machine Learning
+was though! Downloads are in the [project
+page](http://sites.google.com/site/babuschkaengine/Home).
 
 
 ## LBA Image Creator (2007)
