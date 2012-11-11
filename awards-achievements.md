@@ -6,9 +6,8 @@
     starting contestants.
  *  Good results in Spotify programming contest 2010 (7th) and 2011 (16th),
     both contests had about 200 contestants.
- *  Won the [Unihack programming competition](http://unihack.herokuapp.com/) in
-    2012. This one was about web development and was sponsored by both heroku
-    and github.
+ *  Won the [Unihack programming competition][unihack] in 2012.  This one was
+    about web development and was sponsored by both heroku and github.
 
 # Awards and grants
 
@@ -22,3 +21,5 @@
    of the organizer of the contest since 2009, it's my responsibility to use
    this money. As of today, most of the money is spent on paying for travel
    expenses for the different international Olympiads.
+
+[unihack]: http://unihack.herokuapp.com/
