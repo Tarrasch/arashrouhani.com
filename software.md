@@ -19,11 +19,19 @@ Some of my repositories on github are actual projects with me as the main develo
     programming contest, they invited me to talk about the interesting
     technologies I used,
     [here](https://github.com/Tarrasch/Hong/raw/master/presentation/slide.odp)
-    is the slides I used at my presentation. Know IT is one of scandinavias
+    are the slides I used at my presentation. Know IT is one of scandinavias
     major IT consultants.
+  * [DtekPortalen] is the official student web site for the CSE department at
+    Chalmers University. The site is written in haskell using the yesod web
+    framework. The interesting aspects of the project is it's use of Type
+    saftey on the web to deal with the [boundrary
+    issue](http://www.yesodweb.com/book/introduction). The live site is hosted
+    [here][dtekse].
 
 [zsh-functional]: https://github.com/Tarrasch/zsh-functional
 [Hong]: https://github.com/Tarrasch/Hong
+[DtekPortalen]: https://github.com/dtekcth/DtekPortalen
+[dtekse]: https://www.dtek.se/portal
 
 # Old projects
 
