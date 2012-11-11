@@ -14,7 +14,8 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
-    match (list ["software.md", "index.md"]) $ do
+    let resources = ["software.md", "index.md", "awards-achievements.md"]
+    match (list resources) $ do
         route $ setExtension "html"
         compile $ pageCompiler
             >>> applyTemplateCompiler "templates/default.html"
