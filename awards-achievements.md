@@ -18,7 +18,7 @@
    programming contest. The money is given by the *Royal Institute of
    Technology* and the *Swedish Agency for Education*. In 2012 *Spotify* also
    chipped in with an additional 70000 SEK to the organization. I've been one
-   of the organizer of the contest since 2009, it's my responsibility to use
+   of the organizers of the contest since 2009, it's part my responsibility to use
    this money. As of today, most of the money is spent on paying for travel
    expenses for the different international Olympiads.
 
