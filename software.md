@@ -19,7 +19,7 @@ Some of my repositories on github are actual projects with me as the main develo
     programming contest, they invited me to talk about the interesting
     technologies I used,
     [here](https://github.com/Tarrasch/Hong/raw/master/presentation/slide.odp)
-    is the slides I used at my presentatino. Know IT is one of scandinavias
+    is the slides I used at my presentation. Know IT is one of scandinavias
     major IT consultants.
 
 [zsh-functional]: https://github.com/Tarrasch/zsh-functional
