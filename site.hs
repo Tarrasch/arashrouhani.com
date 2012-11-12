@@ -1,6 +1,15 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Control.Arrow ((>>>))
+import Control.Arrow (arr, second, (***), (>>>))
 import Hakyll
+import qualified Text.Pandoc as Pandoc
+import System.Cmd (system)
+import System.Process (runInteractiveProcess, waitForProcess)
+import System.Directory (getTemporaryDirectory, setCurrentDirectory)
+import System.FilePath ((<.>), (</>), takeDirectory, replaceExtension, takeFileName)
+import System.IO -- (hPutStr)
+import Control.Concurrent -- (forkIO)
+import qualified Data.ByteString as B
+import qualified Data.Map as M
 
 main :: IO ()
 main = hakyll $ do
@@ -20,3 +29,20 @@ main = hakyll $ do
         compile $ pageCompiler
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
+
+    match "external/cv/cv.tex" $ do
+        route $ constRoute "cv.pdf"
+        compile pdflatex
+
+pdflatex :: Compiler Resource B.ByteString
+pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
+    (inp,out,err,pid) <-
+      runInteractiveProcess "pdflatex"
+                            [takeFileName fp]
+                            (Just $ takeDirectory fp)
+                            Nothing
+    -- forkIO (hPutStrLn inp "X")
+    -- forkIO (hGetContents out >>= putStrLn)
+    -- forkIO (hGetContents err >>= putStrLn)
+    waitForProcess pid
+    B.readFile $ replaceExtension fp "pdf"
