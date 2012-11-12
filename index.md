@@ -9,7 +9,7 @@ and studying at [georgia tech](http://www.cc.gatech.edu/~arka3/).
  * Contribute to open source on [github](https://github.com/Tarrasch)
  * Frequently ask and answer questions on [stack overflow](http://stackoverflow.com/users/621449/tarrasch)
  * Participate in various programming contests
- * Do occasional [technical blogging](http://www.yesodweb.com/blog/2012/10/haskell-and-ci)
+ * Occasional [technical blogging](http://www.yesodweb.com/blog/2012/10/haskell-and-ci)
  * Organize the [Swedish programming contest](http://www.progolymp.se/Oldpage/) for high school students
 
 # Contact
