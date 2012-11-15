@@ -20,7 +20,7 @@ h1 {
 	margin-bottom: 10px;
 	margin-left: 0px;
 	}
-#Content h2 {
+#main h2 {
 	font-family: "Century Gothic", Arial;
 	font-size: 17px;
 	text-align: center;
@@ -35,18 +35,6 @@ h1 {
 	margin-top: 10px;
 	border: 1px dashed #C0D490;
 }
-.footer {
-	background-image: url(../images/footer.png);
-	background-repeat: repeat-x;
-	background-color: #D9EDA8;
-	padding-top: 20px;
-	padding-right: 25px;
-	padding-bottom: 10px;
-	padding-left: 25px;
-  /* position: fixed; */
-  /* bottom: 0px; */
-  /* width: 100%; */
-}
 
 
 p, li {
@@ -57,8 +45,8 @@ p, li {
 	line-height: 25px;
 	color: #000000;
 	}
-/* #Content>p {margin:0px;} */
-/* #Content>p+p {text-indent:30px;} */
+/* #main>p {margin:0px;} */
+/* #main>p+p {text-indent:30px;} */
 
 a {
 	color:#CC6600;
@@ -146,7 +134,7 @@ blockquote p {
 }
 body>#Header2 {height:115px;}
 
-#Content {
+#main {
 	background-color: #FFFFFF;
 	margin-top: 20px;
 	margin-right: 20px;
@@ -161,9 +149,9 @@ body>#Header2 {height:115px;}
 }
 
 
-#Menu {
+#menu {
 	position:absolute;
-	top:82px;
+	top:40px;
 	left:20px;
 	width:210px;
 	line-height:25px;
@@ -178,34 +166,34 @@ body>#Header2 {height:115px;}
 	padding-left: 10px;
 	}
 /* Again, "be nice to Opera 5". */
-body>#Menu {width:210px;}
-    #tabs {
-	font-size:93%;
-	line-height:normal;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	width: 700px;
-      }
-
-#Header #tabs .font {
-	display: block;
-	float: left;
-	color: #FFFFFF;
-	text-decoration: none;
-	font-weight: bold;
+body>#menu {width:210px;}
+#tabs {
+  font-size:93%;
+  line-height:normal;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 700px;
 }
 
-    #tabs ul {
-	margin:0;
-	list-style:none;
-	height: 42px;
-	padding-right: 5px;
-	padding-bottom: 0;
-	padding-left: 10px;
-	padding-top: 0px;
-	text-align: center;
-      }
+#Header #tabs .font {
+  display: block;
+  float: left;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#tabs ul {
+  margin:0;
+  list-style:none;
+  height: 42px;
+  padding-right: 5px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-top: 0px;
+  text-align: center;
+}
 #Header #tabs .font1 a {
 	font-family: "Century Gothic", Arial;
 	font-size: 12px;
@@ -266,7 +254,7 @@ body>#Menu {width:210px;}
 }
 
 
-    #tabs li {
+#tabs li {
 	display:block;
 	margin-bottom: 0;
 	float: left;
@@ -292,53 +280,53 @@ body>#Menu {width:210px;}
 	color: #006600;
 	text-decoration: none;
 }
-	#mainright {
-	width:32%;
-	float:left;
-	padding-bottom:110px;
-	margin-top: 70px;
-	font-size: 14px;
-	margin-left: 5px;
-	background-image: url(../images/mcbg.png);
-	background-repeat: no-repeat;
-	background-position: right bottom;
-		}
+#mainright {
+  width:32%;
+  float:left;
+  padding-bottom:110px;
+  margin-top: 70px;
+  font-size: 14px;
+  margin-left: 5px;
+  background-image: url(../images/mcbg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
-	#maincenter {
-	width:32%;
-	float:left;
-	padding-bottom:110px;
-	margin-top: 70px;
-	padding-right: 5px;
-	padding-left: 2px;
-	margin-left: 5px;
-	border-right-width: 1px;
-	border-right-style: dashed;
-	border-right-color: #A6B7CA;
-	background-image: url(../images/webbg.png);
-	background-repeat: no-repeat;
-	background-position: right bottom;
-		}
+#maincenter {
+  width:32%;
+  float:left;
+  padding-bottom:110px;
+  margin-top: 70px;
+  padding-right: 5px;
+  padding-left: 2px;
+  margin-left: 5px;
+  border-right-width: 1px;
+  border-right-style: dashed;
+  border-right-color: #A6B7CA;
+  background-image: url(../images/webbg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
-	#mainleft {
-	width:32%;
-	float:left;
-	padding-bottom:110px;
-	margin-top: 70px;
-	padding-right: 5px;
-	margin-left: 5px;
-	border-right-width: 1px;
-	border-right-style: dashed;
-	border-right-color: #A6B7CA;
-	background-image: url(../images/swbg.png);
-	background-repeat: no-repeat;
-	background-position: right bottom;
-		}
+#mainleft {
+  width:32%;
+  float:left;
+  padding-bottom:110px;
+  margin-top: 70px;
+  padding-right: 5px;
+  margin-left: 5px;
+  border-right-width: 1px;
+  border-right-style: dashed;
+  border-right-color: #A6B7CA;
+  background-image: url(../images/swbg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
-	#banner {
-		}
-	#banner h1 { margin:0px; padding:10px}
-#Menu h2 {
+#banner {
+}
+#banner h1 { margin:0px; padding:10px}
+#menu h2 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 18px;
 	display: block;
@@ -347,12 +335,12 @@ body>#Menu {width:210px;}
 	color: #669933;
 	font-weight: normal;
 }
-#Menu .subnav {
+#menu .subnav {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
-#Menu .subnav li {
+#menu .subnav li {
 	display: block;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -362,7 +350,7 @@ body>#Menu {width:210px;}
 	border-bottom-style: dashed;
 	border-bottom-color: #D8D3B9;
 }
-#Menu .subnav a {
+#menu .subnav a {
 	font-weight: normal;
 	color: #CC6633;
 }
@@ -401,7 +389,7 @@ body>#Menu {width:210px;}
     font-weight: normal;
     src: url(GUNNYHA1.eot);
   }
-#Content blockquote {
+#main blockquote {
 	margin: 10px;
 	color: #996633;
 	text-decoration: none;
@@ -454,12 +442,59 @@ body>#Menu {width:210px;}
 	font-weight: normal;
 	text-decoration: none;
 }
-#Menu .subnav a:visited,active {
+#menu .subnav a:visited,active {
 	font-weight: normal;
 	color: #CC6633;
 }
-#Menu .subnav a:hover {
+#menu .subnav a:hover {
 	font-weight: normal;
 	color: #000000;
 	background-color: #F6F6EE;
+}
+
+/* Stuff fo sticky footer */
+html, body {height: 100%;}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom: 60px;  /* must be same height as the footer */
+}
+
+#menu {
+  overflow:auto;
+  padding-bottom: 60px;  /* must be same height as the footer */
+}
+
+
+#footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  clear:both;
+}
+
+#footer { /* This is stuff left from RamblingSoul */
+	background-image: url(../images/footer.png);
+	background-repeat: repeat-x;
+	background-color: #D9EDA8;
+	padding-top: 20px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+  /* position: fixed; */
+  /* bottom: 0px; */
+  /* width: 100%; */
+}
+
+/*Opera Fix*/
+body:before {
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;/
 }
