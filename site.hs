@@ -23,7 +23,13 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
-    let resources = ["software.md", "index.md", "awards-achievements.md"]
+    let resources =
+          [ "software.md"
+          , "index.md"
+          , "awards-achievements.md"
+          , "publications.md"
+          ]
+
     match (list resources) $ do
         route $ setExtension "html"
         compile $ pageCompiler
@@ -32,6 +38,10 @@ main = hakyll $ do
 
     match "external/cv/cv.tex" $ do
         route $ constRoute "cv.pdf"
+        compile pdflatex
+
+    match "external/alphabiscuit/report/report.tex" $ do
+        route $ constRoute "papers/alphabiscuit.pdf"
         compile pdflatex
 
 pdflatex :: Compiler Resource B.ByteString
