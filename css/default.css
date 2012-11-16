@@ -143,7 +143,7 @@ body>#Header2 {height:115px;}
 	padding-right: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	}
+}
 #Header a {
 	color: #993300;
 }
@@ -164,7 +164,7 @@ body>#Header2 {height:115px;}
 	padding-top: 15px;
 	padding-right: 10px;
 	padding-left: 10px;
-	}
+}
 /* Again, "be nice to Opera 5". */
 body>#menu {width:210px;}
 #tabs {
@@ -469,12 +469,8 @@ html, body {height: 100%;}
   padding-bottom: 60px;  /* must be same height as the footer */
 }
 
-
-#footer {
-  position: relative;
-  margin-top: -60px; /* negative value of footer height */
-  height: 60px;
-  clear:both;
+#footer p {
+  margin: 0;
 }
 
 #footer { /* This is stuff left from RamblingSoul */
@@ -489,6 +485,14 @@ html, body {height: 100%;}
   /* bottom: 0px; */
   /* width: 100%; */
 }
+
+#footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  clear:both;
+}
+
 
 /*Opera Fix*/
 body:before {
