@@ -461,15 +461,22 @@ html, body {height: 100%;}
 
 #main {
   overflow:auto;
-  padding-bottom: 60px;  /* must be same height as the footer */
+  padding-bottom: 80px;  /* must be same height as the footer */
 }
 
 #menu {
   overflow:auto;
-  padding-bottom: 60px;  /* must be same height as the footer */
+  padding-bottom: 80px;  /* must be same height as the footer */
 }
 
-#footer p {
+#footer {
+  position: relative;
+  margin-top: -80px; /* negative value of footer height */
+  height: 80px;
+  clear:both;
+}
+
+#foot p {
   margin: 0;
 }
 
@@ -477,22 +484,21 @@ html, body {height: 100%;}
 	background-image: url(../images/footer.png);
 	background-repeat: repeat-x;
 	background-color: #D9EDA8;
-	padding-top: 20px;
-	padding-right: 25px;
-	padding-bottom: 10px;
-	padding-left: 25px;
   /* position: fixed; */
   /* bottom: 0px; */
   /* width: 100%; */
 }
 
-#footer {
-  position: relative;
-  margin-top: -60px; /* negative value of footer height */
-  height: 60px;
-  clear:both;
+#foot {
+  height: 40px;
+	padding-top: 20px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+	padding-left: 25px;
 }
-
+#innerfoot {
+	padding-top: 20px;
+}
 
 /*Opera Fix*/
 body:before {
