@@ -4,3 +4,6 @@
 [submodule "external/alphabiscuit"]
 	path = external/alphabiscuit
 	url = https://github.com/Tarrasch/AlphaBiscuit.git
+[submodule "external/rip-final-report"]
+	path = external/rip-final-report
+	url = https://github.com/Tarrasch/rip-final-report.git
