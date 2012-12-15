@@ -44,6 +44,10 @@ main = hakyll $ do
         route $ constRoute "papers/alphabiscuit.pdf"
         compile pdflatex
 
+    match "external/rip-final-report/Makefile" $ do
+        route $ constRoute "papers/interception.pdf"
+        compile $ make "report.pdf"
+
 pdflatex :: Compiler Resource B.ByteString
 pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
     (inp,out,err,pid) <-
@@ -56,3 +60,14 @@ pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
     -- forkIO (hGetContents err >>= putStrLn)
     waitForProcess pid
     B.readFile $ replaceExtension fp "pdf"
+
+make :: String -> -- | Target name
+        Compiler Resource B.ByteString
+make target = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
+    (inp,out,err,pid) <-
+      runInteractiveProcess "make"
+                            [target]
+                            (Just $ takeDirectory fp)
+                            Nothing
+    waitForProcess pid
+    B.readFile $ takeDirectory fp </> target
