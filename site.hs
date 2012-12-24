@@ -55,9 +55,6 @@ pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
                             [takeFileName fp]
                             (Just $ takeDirectory fp)
                             Nothing
-    -- forkIO (hPutStrLn inp "X")
-    -- forkIO (hGetContents out >>= putStrLn)
-    -- forkIO (hGetContents err >>= putStrLn)
     waitForProcess pid
     B.readFile $ replaceExtension fp "pdf"
 
