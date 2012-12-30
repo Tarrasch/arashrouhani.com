@@ -27,7 +27,7 @@ main = hakyll $ do
           [ "software.md"
           , "index.md"
           , "awards-achievements.md"
-          , "publications.md"
+          , "papers.md"
           ]
 
     match (list resources) $ do
