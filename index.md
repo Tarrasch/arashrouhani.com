@@ -1,8 +1,8 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I am a student at Chalmers University of Technology in Sweden where I am studying
-to master of science in computer science. Currently I am on an exchange program
-and studying at [georgia tech](http://www.cc.gatech.edu/~arka3/).
+I am a student at Chalmers University of Technology in Sweden. I expect to
+graduate as a master in **computer science and engineering** at the end of 2013
+or after the following spring.
 
 # Things I do
 
