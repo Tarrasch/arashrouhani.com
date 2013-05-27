@@ -24,7 +24,7 @@ Some of my repositories on github are actual projects with me as the main develo
   * [DtekPortalen] is the official student web site for the CSE department at
     Chalmers University. The site is written in haskell using the yesod web
     framework. The interesting aspects of the project is it's use of Type
-    saftey on the web to deal with the [boundrary
+    saftey on the web to deal with the [boundary
     issue](http://www.yesodweb.com/book/introduction). The live site is hosted
     [here][dtekse].
 
