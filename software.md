@@ -1,5 +1,5 @@
 Most of my software can be found on my [github
-account](https://github.com/Tarrasch/).  I have almost hundreds of minor
+account](https://github.com/Tarrasch/).  I have hundreds of minor
 contributions to various projects. This is because if something isn't working
 in the software I use, I fix it and contribute back to the community as a
 thanks for developing the software in the first place. For example, I've
