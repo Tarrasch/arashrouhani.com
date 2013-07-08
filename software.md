@@ -1,3 +1,5 @@
+# Software
+
 Most of my software can be found on my [github
 account](https://github.com/Tarrasch/).  I have hundreds of minor
 contributions to various projects. This is because if something isn't working
@@ -32,6 +34,32 @@ Some of my repositories on github are actual projects with me as the main develo
 [Hong]: https://github.com/Tarrasch/Hong
 [DtekPortalen]: https://github.com/dtekcth/DtekPortalen
 [dtekse]: https://www.dtek.se/portal
+
+# Others Projects
+
+I've worked on some bigger projects as a contributor too.
+
+## The Motion Grammar (2013)
+
+During my year abroad at Georgia Tech (2012-2013) I joined the Humanoid
+Robotics lab, [golems][golems]. I worked on a project called the [Motion
+Grammar][mg], it uses a formal language approach to robot control. The idea is
+to control the robot by "executing" a context-free grammar in real time. My
+[contribution][mgk-contribution] to their [codebase][mgk] was an improved
+parser. This required comparing the modern parsers and analyzing which parser
+best withstands the demands of real time robot control. We produced a workshop
+abstract that can be found in the publications section of this website.
+
+To show that the parser generator works correctly, I generated two proof of
+concept parsers. One running in [simulation][motion-serving] and one that I
+uploaded to real [hardware][mg-lights].
+
+[mg]: http://golems.org/projects/mg.html
+[golems]: http://golems.org/projects/mg.html
+[mgk]: https://github.com/golems/motion-grammar-kit/
+[mgk-contribution]: https://github.com/golems/motion-grammar-kit/compare/master...ll-star
+[motion-serving]: https://github.com/Tarrasch/motion-serving
+[mg-lights]: https://github.com/Tarrasch/mg-lights
 
 # Old projects
 
