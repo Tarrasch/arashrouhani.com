@@ -48,6 +48,10 @@ main = hakyll $ do
         route $ constRoute "papers/interception.pdf"
         compile $ make "report.pdf"
 
+    match "papers/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
 pdflatex :: Compiler Resource B.ByteString
 pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
     (inp,out,err,pid) <-
