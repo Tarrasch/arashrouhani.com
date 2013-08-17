@@ -4,6 +4,10 @@ This is a list of published papers that have been accepted to conferences:
     *Software-Synthesis via LL(\*) for Context-Free Robot Programs*, (2013)
     [[PDF]](/papers/ll-star.pdf)
 
+    * Tool demonstration by Neil Dantam at [*4th Workshop on Formal Methods for Robotics and Automation*][RSS13]
+
+[RSS13]: http://verifiablerobotics.com/RSS13/index.html
+
 Some other papers that are not recognized:
 
   * Garcia, Juan; Jones, Harrison; **Rouhani, Arash**, *Interception of moving objects with a robotic arm in a simulated environment* (2012) [[PDF version]](/papers/interception.pdf)
