@@ -6,7 +6,7 @@ contributions to various projects. This is because if something isn't working
 in the software I use, I fix it and contribute back to the community as a
 thanks for developing the software in the first place. For example, I've
 submitted many patches to the [Yesod web framework on
-github](https://github.com/yesodweb).
+github](https://github.com/yesodweb/yesod/commits?author=tarrasch).
 
 Some of my repositories on github are actual projects with me as the main developer. Here are my favorites
 
