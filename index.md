@@ -12,6 +12,11 @@ or the following spring.
  * Occasional [technical blogging](http://www.yesodweb.com/blog/2012/10/haskell-and-ci)
  * Organize the [Swedish programming contest](http://www.csc.kth.se/contest/ioi/) for high school students
 
+# Future Employment Status
+
+I've currently accepted a full-time employment at **Spotify** in Stockholm. I'll
+start in 2014:Q2.
+
 # Contact
 
     Arash.Rouhani
