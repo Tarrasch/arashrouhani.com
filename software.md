@@ -12,8 +12,8 @@ Some of my repositories on github are actual projects with me as the main develo
 
   * [zsh-functional] brings the common higher order functions to your shell. I
     use the functions from this library on a daily basis and it'll be
-    appreciated by all functinal bigots. It's simple and useful and that's why
-    I love it!
+    appreciated by other functional programmers as well. It's simple and useful
+    and that's why I love it!
   * [Hong] is a pong clone written in haskell using the *functional reactive
     programming paragdigm*. This makes the code concise and
     [testable](https://github.com/Tarrasch/Hong/blob/master/test/HongTest.hs)
