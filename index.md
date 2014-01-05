@@ -1,8 +1,7 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I am a student at Chalmers University of Technology in Sweden. I expect to
-graduate as a master in **computer science and engineering** at the end of 2013
-or the following spring.
+I am a student at Chalmers University of Technology in Sweden. I expect
+to graduate as a master in computer science and engineering in mid-spring 2014.
 
 # Things I do
 
