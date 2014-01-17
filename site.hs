@@ -1,12 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid (mappend)
 import Hakyll
 import qualified Text.Pandoc as Pandoc
-import System.Cmd (system)
 import System.Process (runInteractiveProcess, waitForProcess)
-import System.FilePath ((<.>), (</>), takeDirectory, replaceExtension, takeFileName)
-import System.IO -- (hPutStr)
-import Control.Concurrent -- (forkIO)
+import System.FilePath ((</>), takeDirectory, replaceExtension, takeFileName)
 import qualified Data.ByteString as B
 
 main :: IO ()
