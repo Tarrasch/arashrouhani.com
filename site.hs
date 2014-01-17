@@ -67,8 +67,8 @@ fileCreatorCompiler customs = getUnderlying >>=
       let fp = toFilePath id
           (customIO, customLocation) = customs fp
       customIO
-      contents <- B.readFile $ customLocation
-      return (Item { itemIdentifier = id, itemBody = contents })
+      contents <- B.readFile customLocation
+      return Item{itemIdentifier = id, itemBody = contents}
 
 pdflatex :: Compiler (Item B.ByteString)
 pdflatex = fileCreatorCompiler (\fp ->
