@@ -1,15 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Control.Arrow (arr, second, (***), (>>>))
+import Data.Monoid (mappend)
 import Hakyll
 import qualified Text.Pandoc as Pandoc
 import System.Cmd (system)
 import System.Process (runInteractiveProcess, waitForProcess)
-import System.Directory (getTemporaryDirectory, setCurrentDirectory)
 import System.FilePath ((<.>), (</>), takeDirectory, replaceExtension, takeFileName)
 import System.IO -- (hPutStr)
 import Control.Concurrent -- (forkIO)
 import qualified Data.ByteString as B
-import qualified Data.Map as M
 
 main :: IO ()
 main = hakyll $ do
@@ -30,11 +28,12 @@ main = hakyll $ do
           , "papers.md"
           ]
 
-    match (list resources) $ do
+    create resources $ do
         route $ setExtension "html"
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html"
+                                     defaultContext
+            >>= relativizeUrls
 
     match "external/cv/cv.tex" $ do
         route $ constRoute "cv.pdf"
@@ -52,23 +51,29 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
-pdflatex :: Compiler Resource B.ByteString
-pdflatex  = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
-    (inp,out,err,pid) <-
-      runInteractiveProcess "pdflatex"
-                            [takeFileName fp]
-                            (Just $ takeDirectory fp)
-                            Nothing
-    waitForProcess pid
-    B.readFile $ replaceExtension fp "pdf"
+pdflatex :: Compiler (Item B.ByteString)
+pdflatex = getUnderlying >>=
+    \id -> unsafeCompiler $ do
+      let fp = toFilePath id
+      (inp,out,err,pid) <-
+        runInteractiveProcess "pdflatex"
+                              [takeFileName fp]
+                              (Just $ takeDirectory fp)
+                              Nothing
+      waitForProcess pid
+      contents <- B.readFile $ replaceExtension fp "pdf"
+      return (Item { itemIdentifier = id, itemBody = contents })
 
 make :: String -> -- | Target name
-        Compiler Resource B.ByteString
-make target = (arr unResource >>>) $ unsafeCompiler $ \fp -> do
-    (inp,out,err,pid) <-
-      runInteractiveProcess "make"
-                            [target]
-                            (Just $ takeDirectory fp)
-                            Nothing
-    waitForProcess pid
-    B.readFile $ takeDirectory fp </> target
+        Compiler (Item B.ByteString)
+make target = getUnderlying >>=
+    \id -> unsafeCompiler $ do
+      let fp = toFilePath id
+      (inp,out,err,pid) <-
+        runInteractiveProcess "make"
+                              [target]
+                              (Just $ takeDirectory fp)
+                              Nothing
+      waitForProcess pid
+      contents <- B.readFile $ takeDirectory fp </> target
+      return (Item { itemIdentifier = id, itemBody = contents })
