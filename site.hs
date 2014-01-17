@@ -47,16 +47,23 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
+runAndWait :: FilePath -> [String] -> FilePath -> IO ()
+runAndWait program args dir = do
+    (_inp, _out, _err, pid) <-
+      runInteractiveProcess program
+                            args
+                            (Just dir)
+                            Nothing
+    waitForProcess pid
+    return ()
+
 pdflatex :: Compiler (Item B.ByteString)
 pdflatex = getUnderlying >>=
     \id -> unsafeCompiler $ do
       let fp = toFilePath id
-      (inp,out,err,pid) <-
-        runInteractiveProcess "pdflatex"
-                              [takeFileName fp]
-                              (Just $ takeDirectory fp)
-                              Nothing
-      waitForProcess pid
+      runAndWait "pdflatex"
+                 [takeFileName fp]
+                 (takeDirectory fp)
       contents <- B.readFile $ replaceExtension fp "pdf"
       return (Item { itemIdentifier = id, itemBody = contents })
 
@@ -65,11 +72,8 @@ make :: String -> -- | Target name
 make target = getUnderlying >>=
     \id -> unsafeCompiler $ do
       let fp = toFilePath id
-      (inp,out,err,pid) <-
-        runInteractiveProcess "make"
-                              [target]
-                              (Just $ takeDirectory fp)
-                              Nothing
-      waitForProcess pid
+      runAndWait "make"
+                 [target]
+                 (takeDirectory fp)
       contents <- B.readFile $ takeDirectory fp </> target
       return (Item { itemIdentifier = id, itemBody = contents })
