@@ -57,23 +57,32 @@ runAndWait program args dir = do
     waitForProcess pid
     return ()
 
-pdflatex :: Compiler (Item B.ByteString)
-pdflatex = getUnderlying >>=
+fileCreatorCompiler :: (FilePath -- ^ Path to x
+                         -> ( IO (), -- ^ Action to create file
+                              FilePath -- ^ Location of final file
+                            ))
+                       -> Compiler (Item B.ByteString)
+fileCreatorCompiler customs = getUnderlying >>=
     \id -> unsafeCompiler $ do
       let fp = toFilePath id
+          (customIO, customLocation) = customs fp
+      customIO
+      contents <- B.readFile $ customLocation
+      return (Item { itemIdentifier = id, itemBody = contents })
+
+pdflatex :: Compiler (Item B.ByteString)
+pdflatex = fileCreatorCompiler (\fp ->
+      (
       runAndWait "pdflatex"
                  [takeFileName fp]
                  (takeDirectory fp)
-      contents <- B.readFile $ replaceExtension fp "pdf"
-      return (Item { itemIdentifier = id, itemBody = contents })
+      , replaceExtension fp "pdf"))
 
 make :: String -> -- | Target name
         Compiler (Item B.ByteString)
-make target = getUnderlying >>=
-    \id -> unsafeCompiler $ do
-      let fp = toFilePath id
-      runAndWait "make"
-                 [target]
-                 (takeDirectory fp)
-      contents <- B.readFile $ takeDirectory fp </> target
-      return (Item { itemIdentifier = id, itemBody = contents })
+make target = fileCreatorCompiler (\fp ->
+    (
+    runAndWait "make"
+               [target]
+               (takeDirectory fp)
+    , takeDirectory fp </> target))
