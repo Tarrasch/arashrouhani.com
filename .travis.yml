@@ -4,7 +4,6 @@ language: haskell
 install:
   - cabal install --only-dependencies
   - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended
-  - sudo apt-get install texlive-full
   - sudo apt-get install texlive-bibtex-extra
   - sudo apt-get install gnuplot
 before_script:
