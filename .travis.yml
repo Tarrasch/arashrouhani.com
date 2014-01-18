@@ -4,8 +4,8 @@ language: haskell
 install:
   - cabal install --only-dependencies
   - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended
-before_script: 
+before_script:
   - git submodule update --init # The "external/" folder
-script: 
+script:
   - ghc --make site.hs
   - ./site build
