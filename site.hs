@@ -4,6 +4,9 @@ import qualified Text.Pandoc as Pandoc
 import System.Process (runInteractiveProcess, waitForProcess)
 import System.FilePath ((</>), takeDirectory, replaceExtension, takeFileName)
 import qualified Data.ByteString as B
+import GHC.IO.Handle (hGetContents)
+import Control.Monad (when)
+import System.Exit (ExitCode( ExitSuccess ))
 
 main :: IO ()
 main = hakyll $ do
@@ -49,12 +52,20 @@ main = hakyll $ do
 
 runAndWait :: FilePath -> [String] -> FilePath -> IO ()
 runAndWait program args dir = do
-    (_inp, _out, _err, pid) <-
+    (_inp, out, err, pid) <-
       runInteractiveProcess program
                             args
                             (Just dir)
                             Nothing
-    waitForProcess pid
+    exitCode <- waitForProcess pid
+    when (exitCode /= ExitSuccess) $ do
+      outS <- hGetContents out
+      errS <- hGetContents err
+      putStrLn $ "Program `" ++ program ++ "` failed!\n"
+            ++ "\nStdout:\n"
+            ++ outS
+            ++ "\n\nStderr:\n"
+            ++ errS
     return ()
 
 fileCreatorCompiler :: (FilePath -- ^ Path to x
