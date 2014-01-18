@@ -7,6 +7,7 @@ import qualified Data.ByteString as B
 import GHC.IO.Handle (hGetContents)
 import Control.Monad (when)
 import System.Exit (ExitCode( ExitSuccess ))
+import System.Timeout (timeout)
 
 main :: IO ()
 main = hakyll $ do
@@ -52,18 +53,19 @@ main = hakyll $ do
 
 runAndWait :: FilePath -> [String] -> FilePath -> IO ()
 runAndWait program args dir = do
-    (_inp, out, err, pid) <-
-      runInteractiveProcess program
-                            args
-                            (Just dir)
-                            Nothing
+    Just (_inp, out, err, pid) <-
+      timeout (30*1000000) $
+        runInteractiveProcess program
+                              args
+                              (Just dir)
+                              Nothing
     exitCode <- waitForProcess pid
     when (exitCode /= ExitSuccess) $ do
+      putStrLn $ "Program `" ++ program ++ "` failed!"
       outS <- hGetContents out
       errS <- hGetContents err
-      putStrLn $ "Program `" ++ program ++ "` failed!\n"
-            ++ "\nStdout:\n"
-            ++ outS
+      putStrLn $ "Stdout:\n" ++ outS
+      putStrLn $ "Stderr:\n" ++ errS
             ++ "\n\nStderr:\n"
             ++ errS
     return ()
