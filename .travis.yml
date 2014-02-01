@@ -6,6 +6,7 @@ install:
   - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended
   - sudo apt-get install texlive-bibtex-extra
   - sudo apt-get install gnuplot
+  - sudo apt-get install coreutils
 before_script:
   - git submodule update --init # The "external/" folder
 script:

@@ -2,12 +2,13 @@
 import Hakyll
 import qualified Text.Pandoc as Pandoc
 import System.Process (runInteractiveProcess, waitForProcess)
+import GHC.IO.Handle (Handle)
+import System.Process (ProcessHandle)
 import System.FilePath ((</>), takeDirectory, replaceExtension, takeFileName)
 import qualified Data.ByteString as B
 import GHC.IO.Handle (hGetContents)
 import Control.Monad (when)
 import System.Exit (ExitCode( ExitSuccess ))
-import System.Timeout (timeout)
 
 main :: IO ()
 main = hakyll $ do
@@ -51,14 +52,22 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
+unixTimeout :: FilePath -> [String] -> Maybe FilePath -> IO (Handle, Handle, Handle, ProcessHandle)
+unixTimeout program args mdir =
+        runInteractiveProcess program'
+                              args'
+                              mdir
+                              Nothing
+  where program' = "timeout"
+        args'    = "--kill-after=10s" : "10s" : program : args
+
+
 runAndWait :: FilePath -> [String] -> FilePath -> IO ()
 runAndWait program args dir = do
-    Just (_inp, out, err, pid) <-
-      timeout (30*1000000) $
-        runInteractiveProcess program
-                              args
-                              (Just dir)
-                              Nothing
+    (_inp, out, err, pid) <-
+        unixTimeout program
+                    args
+                    (Just dir)
     exitCode <- waitForProcess pid
     when (exitCode /= ExitSuccess) $ do
       putStrLn $ "Program `" ++ program ++ "` failed!"
