@@ -96,7 +96,7 @@ pdflatex :: Compiler (Item B.ByteString)
 pdflatex = fileCreatorCompiler (\fp ->
       (
       runAndWait "pdflatex"
-                 [takeFileName fp]
+                 ["-interaction=nonstopmode", takeFileName fp]
                  (takeDirectory fp)
       , replaceExtension fp "pdf"))
 
