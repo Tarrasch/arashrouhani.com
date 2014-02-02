@@ -61,6 +61,8 @@ unixTimeout program args mdir =
   where program' = "timeout"
         args'    = "--kill-after=10s" : "10s" : program : args
 
+indent :: Int -> String -> String
+indent x = unlines . map (replicate x ' ' ++) . lines
 
 runAndWait :: FilePath -> [String] -> FilePath -> IO ()
 runAndWait program args dir = do
@@ -73,8 +75,8 @@ runAndWait program args dir = do
       putStrLn $ "Program `" ++ program ++ "` failed!"
       outS <- hGetContents out
       errS <- hGetContents err
-      putStrLn $ "Stdout:\n" ++ outS
-      putStrLn $ "Stderr:\n" ++ errS
+      putStrLn $ "Stdout:\n" ++ indent 4 outS
+      putStrLn $ "Stderr:\n" ++ indent 4 errS
             ++ "\n\nStderr:\n"
             ++ errS
     return ()
