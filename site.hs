@@ -77,8 +77,6 @@ runAndWait program args dir = do
       errS <- hGetContents err
       putStrLn $ "Stdout:\n" ++ indent 4 outS
       putStrLn $ "Stderr:\n" ++ indent 4 errS
-            ++ "\n\nStderr:\n"
-            ++ errS
     return ()
 
 fileCreatorCompiler :: (FilePath -- ^ Path to x
