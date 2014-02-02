@@ -8,7 +8,7 @@ import System.FilePath ((</>), takeDirectory, replaceExtension, takeFileName)
 import qualified Data.ByteString as B
 import GHC.IO.Handle (hGetContents)
 import Control.Monad (when)
-import System.Exit (ExitCode( ExitSuccess ))
+import System.Exit (ExitCode(ExitSuccess, ExitFailure))
 
 main :: IO ()
 main = hakyll $ do
@@ -64,6 +64,9 @@ unixTimeout program args mdir =
 indent :: Int -> String -> String
 indent x = unlines . map (replicate x ' ' ++) . lines
 
+isDueTimeout :: ExitCode -> Bool
+isDueTimeout x = any ((x ==) . ExitFailure) [128+9, 124] -- See `man timeout`
+
 runAndWait :: FilePath -> [String] -> FilePath -> IO ()
 runAndWait program args dir = do
     (_inp, out, err, pid) <-
@@ -71,6 +74,7 @@ runAndWait program args dir = do
                     args
                     (Just dir)
     exitCode <- waitForProcess pid
+    when (isDueTimeout exitCode) $ putStrLn "Program timed out!!!"
     when (exitCode /= ExitSuccess) $ do
       putStrLn $ "Program `" ++ program ++ "` failed!"
       outS <- hGetContents out
