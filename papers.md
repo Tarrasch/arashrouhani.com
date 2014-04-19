@@ -1,12 +1,27 @@
+# Master thesis (in progress)
+
+My greatest academic contribution as of yet is my master thesis. I
+embarked on the topic of **Stack Traces for Haskell**. The report is
+expected to be complete in May 2014. The actual *implementation* is not
+finished but has become my main side-project for now. Haskell have
+lacked stack traces for quite a while and I'm happy to bring the GHC
+compiler a bit closer to having stack traces. The full progress of the
+implementation can be tracked in this [ticket].
+
+[ticket]: http://ghc.haskell.org/trac/ghc/ticket/3693
+
+# Recognized work
+
 This is a list of published papers that have been accepted to conferences:
 
   * **Arash Rouhani**, Neil Dantam, Mike Stilman,
     *Software-Synthesis via LL(\*) for Context-Free Robot Programs*, (2013)
-    [[PDF]](/papers/ll-star.pdf)
-
-    * Tool demonstration by Neil Dantam at [*4th Workshop on Formal Methods for Robotics and Automation*][RSS13]
+    [[PDF]](/papers/ll-star.pdf). Neil Dantam held a tool demonstration at
+    [*4th Workshop on Formal Methods for Robotics and Automation*][RSS13]
 
 [RSS13]: http://verifiablerobotics.com/RSS13/index.html
+
+# Other work
 
 Some other papers that are not recognized:
 
