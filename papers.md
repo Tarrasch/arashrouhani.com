@@ -10,6 +10,14 @@ implementation can be tracked in this [ticket].
 
 [ticket]: http://ghc.haskell.org/trac/ghc/ticket/3693
 
+# Presentations
+
+  * *Functional Reactive Programming* - Examples in Haskell and how it is used at facebook. [[PDF]][frp-chalmers-presentation] (January 2014)
+  * *Stack Traces in Haskell* - Master thesis presentation. [[PDF]][master-presentation] (March 2014)
+
+[master-presentation]: /presentations/master-presentation.pdf
+[frp-chalmers-presentation]: /presentations/frp-chalmers-presentation.odp
+
 # Recognized work
 
 This is a list of published papers that have been accepted to conferences:

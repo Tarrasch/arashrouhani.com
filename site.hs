@@ -52,6 +52,10 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
+    match "presentations/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
 unixTimeout :: FilePath -> [String] -> Maybe FilePath -> IO (Handle, Handle, Handle, ProcessHandle)
 unixTimeout program args mdir =
         runInteractiveProcess program'
