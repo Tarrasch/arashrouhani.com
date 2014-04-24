@@ -1,12 +1,15 @@
-# Master thesis (in progress)
+# Master thesis
 
-My greatest academic contribution as of yet is my master thesis. I
-embarked on the topic of **Stack Traces for Haskell**. The report is
-expected to be complete in May 2014. The actual *implementation* is not
-finished but has become my main side-project for now. Haskell have
-lacked stack traces for quite a while and I'm happy to bring the GHC
-compiler a bit closer to having stack traces. The full progress of the
-implementation can be tracked in this [ticket].
+My greatest academic contribution as of yet is my master thesi. I embarked on
+the topic of **Stack Traces for Haskell**. [[PDF]][master-thesis] (April 2014)
+
+[master-thesis]: /papers/master-thesis.pdf
+
+The actual *implementation* is not finished but has become my main
+side-project for now. Haskell have lacked stack traces for quite a while
+and I'm happy to bring the GHC compiler a bit closer to having stack
+traces. The full progress of the implementation can be tracked in this
+[ticket].
 
 [ticket]: http://ghc.haskell.org/trac/ghc/ticket/3693
 
