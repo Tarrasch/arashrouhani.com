@@ -1,6 +1,6 @@
 # Master thesis
 
-My greatest academic contribution as of yet is my master thesi. I embarked on
+My greatest academic contribution as of yet is my master thesis. I embarked on
 the topic of **Stack Traces for Haskell**. [[PDF]][master-thesis] (April 2014)
 
 [master-thesis]: /papers/master-thesis.pdf
