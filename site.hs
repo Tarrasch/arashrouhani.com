@@ -27,6 +27,7 @@ main = hakyll $ do
           , "index.md"
           , "awards-achievements.md"
           , "papers.md"
+          , "presentations.md"
           ]
 
     create resources $ do
