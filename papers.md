@@ -27,7 +27,7 @@ This is a list of published papers that have been accepted to conferences:
 
 # Other work
 
-Some other papers that are not recognized:
+Some other work I'm proud of:
 
   * Garcia, Juan; Jones, Harrison; **Rouhani, Arash**, *Interception of moving
     objects with a robotic arm in a simulated environment* [[PDF]][RIP2012] (December 2012)
