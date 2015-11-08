@@ -1,6 +1,8 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I am developer at Spotify (Stockholm) in their data infrastructure team.
+I am developer at VNG Corporation (Ho Chi Minh City) using big data
+technologies. As a data engineer, I assist analysts to gain insights about the
+users on VNG's award winning messing app, Zalo.
 
 # Things I do
 
