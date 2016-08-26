@@ -1,6 +1,3 @@
-[submodule "external/cv"]
-	path = external/cv
-	url = https://github.com/Tarrasch/Curriculum-Vitae.git
 [submodule "external/alphabiscuit"]
 	path = external/alphabiscuit
 	url = https://github.com/Tarrasch/AlphaBiscuit.git

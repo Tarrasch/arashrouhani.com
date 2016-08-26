@@ -1,0 +1,103 @@
+\documentclass[11pt]{res} % default is 10 pt
+\usepackage{hyperref}
+\setlength{\textheight}{9.5in} % increase text height to fit resume on 1 page
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+
+\begin{document}
+
+\name{Arash Rouhani} % the \\[12pt] adds a blank line after name
+
+\address{{\bf } \begin{tabular}[t]{l l}
+                       \\ \href{mailto:Arash.Rouhani@gmail.com}{Arash.Rouhani@gmail.com}
+                \end{tabular} }
+\address{{\bf } \begin{tabular}[t]{l l}
+                       \\ \href{http://arashrouhani.com}{arashrouhani.com}
+                \end{tabular} }
+
+\begin{resume}
+
+\section{PROFESSIONAL QUALIFICATIONS}
+   \begin{itemize} % \itemsep -2pt  % reduce space between items
+   \item
+     Chief Maintainer of \href{https://github.com/spotify/luigi}{luigi}, a
+     very popular open source task orchestrator.
+   \item Second best Swedish participant in
+    Google Code Jam 2010 and TopCoder Open 2010.
+   \item Won the national Informatics Olympiad 2009.
+    Represented Sweden in the International Olympiad in Informatics (IOI), Bulgaria 2009.
+   \item Versed in many programming languages (Haskell, C++, C\#, Java, Python, Ruby)
+    and have tried out many paradigms
+    (Reactive, Concurrency-Based, Logical).
+   \item Linux user. I use
+    \href{https://github.com/Tarrasch}{github} on a daily basis and I have written many
+    \href{https://github.com/search?q=\%40Tarrasch+zsh+OR+antigen\&type=Repositories\&ref=searchresults}{zsh shell plugins}.
+   % \item Maintaining a Jenkins CI server and webmastering my university's
+   %   student website.
+   % \item Been a supplemental instruction leader and teaching assistant in
+   %   various courses.
+   % \item Speaking four languages: Swedish, English, Farsi and (some) German.
+ \end{itemize}
+
+\section{EDUCATION}
+ \begin{itemize} % \itemsep -2pt  % reduce space between items
+   % \item Master's degree in Algorithms, Languages and Logic from Chalmers
+   %   (2013-2014).
+   \item Master's degree in Algorithms, Languages and Logic from Chalmers
+     (2009-2014).
+   \item Graduate level exchange student at Georgia Tech (2012-2013).
+   % \item Bachelor's degree in CSE from Chalmers University of Technology
+   %   (2009-2012).
+ \end{itemize}
+
+\section{WORKING EXPERIENCE}
+\emph{Spotify}, {\footnotesize Developer, April 2014 and ongoing}, Stockholm, Sweden
+\vspace{0.2in}
+   \begin{itemize}
+     \item I help other teams become more data-driven by developing tools and
+     providing guidance.  In particular I work a lot with Luigi and Apache
+     Crunch.
+ \end{itemize}
+
+\emph{Facebook}, {\footnotesize Software Engineer Intern, May-August 2013}, Menlo Park, California
+\vspace{0.2in}
+   \begin{itemize}
+   \item I worked on an internal job scheduler and interfaced with HBase. The
+     scheduler used reactive programming to handle that HBase region mappings
+     can change. I replaced a map reduce job with one using the internal
+     scheduler. The internal scheduler were two times as fast.
+ \end{itemize}
+
+ \emph{Spotify}, {\footnotesize Software Engineer Intern, June-August 2012 and 2011}, Stockholm, Sweden
+\vspace{0.2in}
+   \begin{itemize} % \itemsep -2pt  % reduce space between items
+   \item In 2011 I designed and implemented a large test suite for their C API
+     libspotify which significantly increased the code coverage. Many bugs were
+     detected as a result, some of which I fixed. In 2012 I resolved
+     concurrency issues their client program had. As a result, they now can use
+     continuous integration and trust it, since the bug fixes removed
+     intermittent failures.
+
+ \end{itemize}
+
+
+ \emph{Silobreaker}, {\footnotesize Software Engineer Intern, June-August 2010 and 2009}, Stockholm, Sweden
+\vspace{0.2in}
+ \begin{itemize} % \itemsep -2pt  % reduce space between items
+  \item Built a mobile site, used Support Vector Machines, wrote a tokenizer,
+   programmed a GUI.
+  \item Became acquainted with Scrum and Test Driven Development.
+\end{itemize}
+
+\section{OTHER MERITS}
+
+\begin{itemize} % \itemsep -2pt  % reduce space between items
+    % \item European Robotics Championship 2010 in Vienna.
+    %  Participated with a autonomous line-following robot.
+  \item Organizing the informatics contest in Sweden.  I've authored about
+    30 tasks (with solutions and input data) and traveled to Estonia (2010),
+    Denmark (2011), Latvia (2012), Taiwan (2014) and Kazakhstan (2015) as a
+    team leader with the Swedish IOI team.
+\end{itemize}
+
+\end{resume}
+\end{document}
