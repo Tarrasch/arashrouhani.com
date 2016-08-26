@@ -37,18 +37,6 @@ main = hakyll $ do
                                      defaultContext
             >>= relativizeUrls
 
-    match "external/cv/cv.tex" $ do
-        route $ constRoute "cv.pdf"
-        compile pdflatex
-
-    match "external/alphabiscuit/report/report.tex" $ do
-        route $ constRoute "papers/alphabiscuit.pdf"
-        compile pdflatex
-
-    match "external/rip-final-report/Makefile" $ do
-        route $ constRoute "papers/interception.pdf"
-        compile $ make "report.pdf"
-
     match "papers/*" $ do
         route idRoute
         compile copyFileCompiler
@@ -100,20 +88,3 @@ fileCreatorCompiler customs = getUnderlying >>=
       customIO
       contents <- B.readFile customLocation
       return Item{itemIdentifier = id, itemBody = contents}
-
-pdflatex :: Compiler (Item B.ByteString)
-pdflatex = fileCreatorCompiler (\fp ->
-      (
-      runAndWait "pdflatex"
-                 ["-interaction=nonstopmode", takeFileName fp]
-                 (takeDirectory fp)
-      , replaceExtension fp "pdf"))
-
-make :: String -> -- | Target name
-        Compiler (Item B.ByteString)
-make target = fileCreatorCompiler (\fp ->
-    (
-    runAndWait "make"
-               [target]
-               (takeDirectory fp)
-    , takeDirectory fp </> target))
