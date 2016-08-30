@@ -1,17 +1,39 @@
+sudo: false
+
+# Arash: Most of the things related to stack and haskell were copied from
+# https://docs.haskellstack.org/en/stable/travis_ci/
+# Caching so the next build will be fast too.
+cache:
+  directories:
+  - $HOME/.stack
+
+addons:
+  apt:
+    sources:
+      - hvr-ghc
+    packages:
+      - texlive-latex-base
+      - texlive-latex-extra
+      - texlive-latex-recommended
+      - gnuplot
+      - coreutils
+      - linkchecker
+      - ghc-7.10.3
+
+# Download and unpack the stack executable
+before_install:
+  - mkdir -p ~/.local/bin
+  - export PATH=$HOME/.local/bin:$PATH
+  - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+  - export PATH=/opt/ghc/7.10.3/bin:$PATH
+install:
+  - ./travis_long stack --no-terminal --skip-ghc-check setup
+  - ./travis_long stack --no-terminal --skip-ghc-check test --only-snapshot
+
 # So my approach here is that I think of 'script' as the things being
 # actually *my* responsibilty.
-language: haskell
-install:
-  - cabal install --only-dependencies
-  - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended
-  - sudo apt-get install texlive-fonts-extra and texlive-fonts-recommended
-  - sudo apt-get install texlive-bibtex-extra
-  - sudo apt-get install gnuplot
-  - sudo apt-get install coreutils
-  - sudo apt-get install linkchecker
-before_script:
-  - git submodule update --init # The "external/" folder
 script:
-  - ghc --make site.hs
+  - stack --no-terminal --skip-ghc-check test
+  - stack ghc --make site.hs
   - ./site build
   - linkchecker '--ignore-url=http://validator.w3.org/check\?uri=referer' --no-warnings _site
