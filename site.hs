@@ -22,15 +22,7 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
-    let resources =
-          [ "software.md"
-          , "index.md"
-          , "awards-achievements.md"
-          , "papers.md"
-          , "presentations.md"
-          ]
-
-    create resources $ do
+    match "pages/*.md" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html"
