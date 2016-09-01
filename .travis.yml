@@ -27,8 +27,8 @@ before_install:
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
   - export PATH=/opt/ghc/7.10.3/bin:$PATH
 install:
-  - ./travis_long stack --no-terminal --skip-ghc-check setup
-  - ./travis_long stack --no-terminal --skip-ghc-check test --only-snapshot
+  - stack --no-terminal --skip-ghc-check setup
+  - stack --no-terminal --skip-ghc-check test --only-snapshot
 
 # So my approach here is that I think of 'script' as the things being
 # actually *my* responsibilty.
