@@ -20,10 +20,9 @@ This is a list of published papers that have been accepted to conferences:
   * **Arash Rouhani**, Neil Dantam, Mike Stilman,
     *Software-Synthesis via LL(\*) for Context-Free Robot Programs*,
     [[PDF]][ll-star] (May 2013). Neil Dantam held a tool demonstration at
-    [*4th Workshop on Formal Methods for Robotics and Automation*][RSS13]
+    *4th Workshop on Formal Methods for Robotics and Automation*
 
 [ll-star]: /papers/ll-star.pdf
-[RSS13]: http://verifiablerobotics.com/RSS13/index.html
 
 # Other work
 
