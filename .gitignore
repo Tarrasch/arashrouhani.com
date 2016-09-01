@@ -4,3 +4,4 @@ _site/
 site
 .hsenv*/
 dist/
+.stack-work/
