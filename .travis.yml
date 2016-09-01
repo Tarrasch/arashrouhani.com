@@ -35,5 +35,6 @@ install:
 script:
   - stack --no-terminal --skip-ghc-check test
   - stack ghc --make site.hs
-  - ./site build
-  - linkchecker '--ignore-url=http://validator.w3.org/check\?uri=referer' --no-warnings _site
+  - stack exec site build
+  # - stack exec site check  # Sensitive
+  - linkchecker --no-warnings _site
