@@ -1,5 +1,10 @@
 sudo: false
 
+# We do install haskell ourselves, no need to use the default
+# "ruby" as language
+# https://github.com/travis-ci/travis-ci/issues/4895#issuecomment-150703192
+language: generic
+
 # Arash: Most of the things related to stack and haskell were copied from
 # https://docs.haskellstack.org/en/stable/travis_ci/
 # Caching so the next build will be fast too.
