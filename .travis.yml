@@ -14,9 +14,6 @@ addons:
     packages:
       - texlive-latex-base
       - texlive-latex-extra
-      - texlive-latex-recommended
-      - gnuplot
-      - coreutils
       - ghc-7.10.3
         # - linkchecker  # at the moment disabled on travis
 
