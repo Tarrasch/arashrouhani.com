@@ -34,7 +34,7 @@ install:
 # actually *my* responsibilty.
 script:
   - stack --no-terminal --skip-ghc-check test
-  - stack ghc --make site.hs
+  - stack build
   - stack exec site build
   # - stack exec site check  # Sensitive
   - linkchecker --no-warnings _site
