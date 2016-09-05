@@ -17,8 +17,8 @@ addons:
       - texlive-latex-recommended
       - gnuplot
       - coreutils
-      - linkchecker
       - ghc-7.10.3
+        # - linkchecker  # at the moment disabled on travis
 
 # Download and unpack the stack executable
 before_install:
@@ -37,4 +37,4 @@ script:
   - stack build
   - stack exec site build
   # - stack exec site check  # Sensitive
-  - linkchecker --no-warnings _site
+  # - linkchecker --no-warnings _site  # The package is absent on Travis (see above)
