@@ -24,12 +24,17 @@ addons:
 
 # Download and unpack the stack executable
 before_install:
-  - openssl aes-256-cbc -K $encrypted_ef26232374d4_key -iv $encrypted_ef26232374d4_iv
-    -in ssh/arashrouhani_com.enc -out ssh/arashrouhani_com -d
   - mkdir -p ~/.local/bin
   - export PATH=$HOME/.local/bin:$PATH
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
   - export PATH=/opt/ghc/7.10.3/bin:$PATH
+
+  # Inspired from http://scurker.com/automated-deploys-with-travis/
+  # and https://github.com/scurker/scurker.com/blob/master/.travis.yml
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - openssl aes-256-cbc -K $encrypted_ef26232374d4_key -iv $encrypted_ef26232374d4_iv -in ssh/arashrouhani_com.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+
 install:
   - stack --no-terminal --skip-ghc-check setup
   - stack --no-terminal --skip-ghc-check test --only-snapshot
@@ -42,3 +47,11 @@ script:
   - stack exec site build
   # - stack exec site check  # Sensitive
   # - linkchecker --no-warnings _site  # The package is absent on Travis (see above)
+
+after_success:
+  - stack exec site clean  # Now we do it again
+  - git clone git@github.com:Tarrasch/tarrasch.github.io.git _site
+  - stack exec site build
+  - (cd _site && git -c core.excludesfile='NONE' add --all -- ./)
+  - (cd _site && git commit --message="Commiting generated contents")
+  - (cd _site && git push origin master)
