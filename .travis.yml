@@ -24,6 +24,8 @@ addons:
 
 # Download and unpack the stack executable
 before_install:
+  - openssl aes-256-cbc -K $encrypted_ef26232374d4_key -iv $encrypted_ef26232374d4_iv
+    -in ssh/arashrouhani_com.enc -out ssh/arashrouhani_com -d
   - mkdir -p ~/.local/bin
   - export PATH=$HOME/.local/bin:$PATH
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
