@@ -7,9 +7,9 @@ The files for my personal web page. I usually use these commands:
 
 ```
 stack build
-stack exec site clean
-stack exec site build
-stack exec site check  # This tend to fail due to sites.google.com certificates
+stack exec -- site clean
+stack exec -- site build
+stack exec -- site check  # This tend to fail due to sites.google.com certificates
 ```
 
 ## Build
