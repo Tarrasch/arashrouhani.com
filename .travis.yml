@@ -52,6 +52,11 @@ after_success:
   - stack exec site clean  # Now we do it again
   - git clone git@github.com:Tarrasch/tarrasch.github.io.git _site
   - stack exec site build
+  # I use arash@rouhani.se for the ssh key, dunno if it matters
+  # I use the --global way of setting options as I do as it's
+  # done in https://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci
+  - git config --global user.email 'arash@rouhani.se'
+  - git config --global user.name 'Arash Rouhani (on travis)'
   - (cd _site && git -c core.excludesfile='NONE' add --all -- ./)
   - (cd _site && git commit --message="Commiting generated contents")
   - (cd _site && git push origin master)
