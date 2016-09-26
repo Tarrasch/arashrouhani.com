@@ -48,7 +48,9 @@ script:
   # - stack exec site check  # Sensitive
   # - linkchecker --no-warnings _site  # The package is absent on Travis (see above)
 
-after_success:
+  # I was first tempted to put these steps in "after_success:",
+  # but I changed my mind because I want the build to fail if
+  # we fail to push the changes
   - stack exec site clean  # Now we do it again
   - git clone git@github.com:Tarrasch/tarrasch.github.io.git _site
   - stack exec site build
