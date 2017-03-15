@@ -5,13 +5,13 @@ the topic of **Stack Traces for Haskell**. [[PDF]][master-thesis] (April 2014)
 
 [master-thesis]: /papers/master-thesis.pdf
 
-The actual *implementation* is not finished but has become my main
-side-project for now. Haskell have lacked stack traces for quite a while
-and I'm happy to bring the GHC compiler a bit closer to having stack
-traces. The full progress of the implementation can be tracked in this
-[ticket].
-
-[ticket]: http://ghc.haskell.org/trac/ghc/ticket/3693
+The implementation came to completion after the master thesis was written
+[(documentation)](https://hackage.haskell.org/package/base-4.9.1.0/docs/GHC-ExecutionStack.html).
+After some refining of my code on my spare time, I sent a few patches for
+review.  While the patches did not meet the bar, an active GHC Contributor, Ben
+Gamari, took on the challenge to rewrite and productionize my prototype which
+eventually got merged. The big picture roadmap is available on [GHC's
+wiki](https://ghc.haskell.org/trac/ghc/wiki/DWARF/Status).
 
 # Recognized work
 
