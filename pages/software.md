@@ -1,4 +1,4 @@
-# Software
+# Software I once wrote
 
 Most of my software can be found on my [github
 account](https://github.com/Tarrasch/).  I have hundreds of minor
@@ -8,13 +8,13 @@ thanks for developing the software in the first place. For example, I've
 submitted many patches to the [Yesod web framework on
 github](https://github.com/yesodweb/yesod/commits?author=tarrasch).
 
-Some of my repositories on github are actual projects with me as the main developer. Here are my favorites
+Some of my repositories on github are actual projects with me as the main developer. Here are some favorites
 
-  * [zsh-functional] brings the common higher order functions to your shell. I
+  * [zsh-functional] - 2012, brings the common higher order functions to your shell. I
     use the functions from this library on a daily basis and it'll be
     appreciated by other functional programmers as well. It's simple and useful
     and that's why I love it!
-  * [Hong] is a pong clone written in haskell using the *functional reactive
+  * [Hong] - 2011, is a pong clone written in haskell using the *functional reactive
     programming paragdigm*. This makes the code concise and
     [testable](https://github.com/Tarrasch/Hong/blob/master/test/HongTest.hs)
     in isolation. After showing this game to Know IT as part of their
@@ -23,7 +23,7 @@ Some of my repositories on github are actual projects with me as the main develo
     [here](https://github.com/Tarrasch/Hong/raw/master/presentation/slide.odp)
     are the slides I used at my presentation. Know IT is one of scandinavias
     major IT consultants.
-  * [DtekPortalen] is the official student web site for the CSE department at
+  * [DtekPortalen] - 2012, is the official student web site for the CSE department at
     Chalmers University. The site is written in haskell using the yesod web
     framework. The interesting aspects of the project is it's use of Type
     saftey on the web to deal with the [boundary
@@ -32,10 +32,6 @@ Some of my repositories on github are actual projects with me as the main develo
 [zsh-functional]: https://github.com/Tarrasch/zsh-functional
 [Hong]: https://github.com/Tarrasch/Hong
 [DtekPortalen]: https://github.com/dtekcth/DtekPortalen
-
-# Others Projects
-
-I've worked on some bigger projects as a contributor too.
 
 ## The Motion Grammar (2013)
 
@@ -59,7 +55,7 @@ uploaded to real [hardware][mg-lights].
 [motion-serving]: https://github.com/Tarrasch/motion-serving
 [mg-lights]: https://github.com/Tarrasch/mg-lights
 
-# Old projects
+# Very old projects
 
 Here are some projects I created before I started to use github. While these
 projects might be poorly coded, they testify that my passion for programming
