@@ -1,8 +1,7 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I am developer at VNG Corporation (Ho Chi Minh City) using big data
-technologies. As a data engineer, I assist analysts to gain insights about the
-users on VNG's award winning messing app, Zalo.
+I'm a software engineer and I currently (March 2017) look for a new job. I've
+quit my job and my availability is high during this time.
 
 # Things I do
 
