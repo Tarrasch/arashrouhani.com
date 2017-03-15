@@ -3,15 +3,14 @@
 I'm a software engineer and I currently (March 2017) look for a new job. I've
 quit my job and my availability is high during this time.
 
-# Things I do
+### Things I do
 
- * Contribute to open source on [github](https://github.com/Tarrasch)
- * Frequently ask and answer questions on [stack overflow](http://stackoverflow.com/users/621449/tarrasch)
- * Participate in various programming contests
- * Occasional [technical blogging](http://www.yesodweb.com/blog/2012/10/haskell-and-ci)
- * Organize the [Swedish programming contest](http://www.progolymp.se) for high school students
+In the world of open source, I'm best known for being the chief maintainer of
+[luigi](https://github.com/spotify/luigi). I've also been organazing the
+[Swedish programming contest](http://www.progolymp.se) for high school students
+since 2010.
 
-# Contact
+### Contact
 
     Arash.Rouhani
        - || -    @gmail.com
@@ -26,9 +25,11 @@ quit my job and my availability is high during this time.
 <a href= "https://www.linkedin.com/in/arash-rouhani-93193463/"><i class="fa fa-linkedin fa-5x"></i></a>
 </div>
 <div class="col-md-1">
+<a href= "http://stackoverflow.com/users/621449/tarrasch"><i class="fa fa-stack-overflow fa-5x"></i></a>
+</div>
+<div class="col-md-1">
 <a href= "https://twitter.com/ArashRouhani"><i class="fa fa-twitter fa-5x"></i></a>
 </div>
-<div class="col-md-1"></div>
 <div class="col-md-8"></div>
 </div>
 </div>
