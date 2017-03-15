@@ -22,6 +22,14 @@ main = hakyll $ do
         route idRoute
         compile compressCssCompiler
 
+    match "font-awesome-4.7.0/**/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
+    match "bootstrap-3.3.7-dist/**/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
     match "templates/*" $ compile templateCompiler
 
     match "pages/*.md" $ do
