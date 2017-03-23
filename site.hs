@@ -51,6 +51,10 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
+    match "grades/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
 -- Inspired from http://yannesposito.com/Scratch/en/blog/Hakyll-setup/
 removeFolderAndMakeHtml :: Routes
 removeFolderAndMakeHtml = customRoute createIndexRoute
