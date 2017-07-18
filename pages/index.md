@@ -1,6 +1,6 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I'm a software engineer and I currently (March 2017) look for a new job. I've
+I'm a software engineer and I'm currently (June 2017) looking for a new job. I've
 quit my job and my availability is high during this time.
 
 ### Things I do
