@@ -15,3 +15,7 @@ stack exec -- site check  # This tend to fail due to sites.google.com certificat
 ## Build
 
 See the contents of `.travis.yml` for more detailed instructions
+
+## Results
+
+The generated files "should" automatically publish to https://github.com/Tarrasch/tarrasch.github.io
