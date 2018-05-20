@@ -24,7 +24,7 @@ since 2010.
 <a href= "https://www.linkedin.com/in/arash-rouhani-93193463/"><i class="fa fa-linkedin fa-5x"></i></a>
 </div>
 <div class="col-md-1">
-<a href= "http://stackoverflow.com/users/621449/tarrasch"><i class="fa fa-stack-overflow fa-5x"></i></a>
+<a href= "https://stackoverflow.com/users/621449/tarrasch"><i class="fa fa-stack-overflow fa-5x"></i></a>
 </div>
 <div class="col-md-1">
 <a href= "https://twitter.com/ArashRouhani"><i class="fa fa-twitter fa-5x"></i></a>

@@ -33,11 +33,10 @@ Some other work I'm proud of:
   * Josefsson, Jesper;
     Larsson, Sofia; Oleander, Linus; **Rouhani-Kalleh, Arash**; Sahlberg,
     Pontus; Ängeslevä, Jonas, *Water - En ersättning för Fire, baserad på
-    versionshantering* [[Online resource]][bachelor-thesis-online]
+    versionshantering*
     [[PDF]][bachelor-thesis] (May 2012)
   * **Rouhani, Arash**, *AlphaBiscuit - Image Recognition of Letter Biscuits* [[PDF]][alphabiscuit] (May 2011)
 
 [RIP2012]: /papers/interception.pdf
 [bachelor-thesis]: /papers/bachelor-thesis.pdf
-[bachelor-thesis-online]: http://publications.lib.chalmers.se/publication/159905-water-en-ersattning-for-fire-baserad-pa-versionshantering
 [alphabiscuit]: /papers/alphabiscuit.pdf
