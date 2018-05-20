@@ -18,7 +18,7 @@ since 2010.
 <div class="container">
 <div class="row">
 <div class="col-md-1">
-<a href= "https://github.com/Tarrasch" target="_blank"><i class="fa fa-github fa-5x"></i></a>
+<a href= "https://github.com/Tarrasch"><i class="fa fa-github fa-5x"></i></a>
 </div>
 <div class="col-md-1">
 <a href= "https://www.linkedin.com/in/arash-rouhani-93193463/"><i class="fa fa-linkedin fa-5x"></i></a>
