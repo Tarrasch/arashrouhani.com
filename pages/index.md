@@ -1,6 +1,6 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I'm a software engineer. In October 2017 I will start at Google Zürich.
+I'm a software engineer at Google Zürich working with YouTube.
 
 ### Things I do
 
