@@ -12,10 +12,23 @@ stack exec -- site build
 stack exec -- site check  # This tend to fail due to sites.google.com certificates
 ```
 
-## Build
+## Pushing the website
 
-See the contents of `.travis.yml` for more detailed instructions
+I push the website into a different repository to keep the "build recipe" (this repo) clean from build artifacts ([this other repo](https://github.com/Tarrasch/tarrasch.github.io)). To sync over the changes, do these steps.
 
-## Results
+From this repo.
 
-The generated files "should" automatically publish to https://github.com/Tarrasch/tarrasch.github.io
+```
+stack exec -- site build
+rsync  --verbose --delete-after --recursive _site/* ../tarrasch.github.io/
+```
+
+Go to other repo `cd ../tarrasch.github.io`. Check that `git status` diff makes sense and then run:
+
+```
+git -c core.excludesfile='NONE' add --all -- ./
+git commit --message="Commiting generated contents"
+git push origin master
+```
+
+This "manual" process the crazy `.travis.yml` script I used to have. :D
