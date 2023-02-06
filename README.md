@@ -12,6 +12,12 @@ stack exec -- site build
 stack exec -- site check  # This tend to fail due to sites.google.com certificates
 ```
 
+Test the website with
+
+```
+firefox _site/index.html
+```
+
 ## Pushing the website
 
 I push the website into a different repository to keep the "build recipe" (this repo) clean from build artifacts ([this other repo](https://github.com/Tarrasch/tarrasch.github.io)). To sync over the changes, do these steps.
