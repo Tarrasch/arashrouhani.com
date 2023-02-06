@@ -4,10 +4,10 @@ I'm a software engineer at Google Zürich working with YouTube.
 
 ### Things I do
 
-In the world of open source, I'm best known for being the chief maintainer of
+In the world of open source, I'm best known for
 [luigi](https://github.com/spotify/luigi). I've also been organazing the
 [Swedish programming contest](http://www.progolymp.se) for high school students
-since 2010.
+from 2010 to 2017.
 
 ### Contact
 
