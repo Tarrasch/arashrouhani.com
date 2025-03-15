@@ -1,6 +1,6 @@
 <img style="float:right;" src="/images/me.png" alt="Arash Rouhani" />
 
-I'm a software engineer at Google Zürich working with YouTube.
+I'm a software engineer at Google in Zürich. The most up to date part of this homepage would be my [CV](/cv.pdf).
 
 ### Things I do
 
@@ -13,7 +13,6 @@ from 2010 to 2017.
 
     Arash.Rouhani
        - || -    @gmail.com
-
 
 <div class="container">
 <div class="row">
