@@ -39,9 +39,9 @@ main = hakyll $ do
                                      defaultContext
             >>= relativizeUrls
 
-    match "cv/cv.tex" $ do
+    match "cv/cv.pdf" $ do
         route $ constRoute "cv.pdf"
-        compile pdflatex
+        compile copyFileCompiler
 
     match "papers/*" $ do
         route idRoute
