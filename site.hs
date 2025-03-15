@@ -2,15 +2,18 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 import Hakyll
 import qualified Text.Pandoc as Pandoc
-import System.Process (runInteractiveProcess, waitForProcess)
-import GHC.IO.Handle (Handle)
-import System.Process (ProcessHandle)
-import System.FilePath ((</>), takeDirectory, replaceExtension, takeFileName)
+import System.Process
+    ( runInteractiveProcess, waitForProcess, ProcessHandle )
+import GHC.IO.Handle ( Handle, hGetContents )
+import System.FilePath
+    ( (</>),
+      takeDirectory,
+      replaceExtension,
+      takeFileName,
+      takeBaseName )
 import qualified Data.ByteString as B
-import GHC.IO.Handle (hGetContents)
 import Control.Monad (when)
 import System.Exit (ExitCode(ExitSuccess, ExitFailure))
-import System.FilePath (takeBaseName)
 
 main :: IO ()
 main = hakyll $ do
@@ -92,7 +95,6 @@ runAndWait program args dir = do
       errS <- hGetContents err
       putStrLn $ "Stdout:\n" ++ indent 4 outS
       putStrLn $ "Stderr:\n" ++ indent 4 errS
-    return ()
 
 fileCreatorCompiler :: (FilePath -- ^ Path to x
                          -> ( IO (), -- ^ Action to create file
